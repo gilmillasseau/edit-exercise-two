@@ -1,5 +1,7 @@
 ## Part 2 - Let's build our folio, with React
 
+[![Screenshot-2018-11-06-at-23-18-19.png](https://i.postimg.cc/t4d7kBL3/Screenshot-2018-11-06-at-23-18-19.png)](https://postimg.cc/cvHs4B1C)
+
 ### Workshop resources:
 
 - Graph CMS: https://app.graphcms.com
@@ -22,7 +24,7 @@ This will create a folder on called `edit-exercise-one`
 
 ### First we need data
 
-#### GraphCMS challenge
+#### GraphCMS overview and setup
 
 - Login into GraphCMS
 
@@ -56,13 +58,22 @@ type Project @model {
 }
 ```
 
+### Try to connect your app with Graph API
+
+The goal of the React challange is to create an app in which you can showcase your own projects on a list, and then access each one individually to check the details on a detail page.
+
+The list is already implemented and the implementation will be explained, then it's up to you to create the detail page and connect it to the GraphQL server.
+
+First of all, duplicate the `.env` file, rename it to `.env.local` and fill it with the GraphCMS token and ID:
+
+```
+REACT_APP_GRAPH_CMS_FOLIO_TOKEN=<your token>
+REACT_APP_GRAPH_CMS_FOLIO_ID=<your graphcms id>
+```
+
 ### Extra feature
 
-Let's add state to our component and build a like counter:
-
-```
-💙 (6)
-```
+Build project detail view!
 
 ### Congrats! 🎉
 
