@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import { graphql } from 'react-apollo/index';
+import React, { Component } from "react";
+import { graphql } from "react-apollo/index";
 
-import HeaderQuery from './graphql/query';
-import HeaderQueryOptions from './graphql/options';
+import HeaderQuery from "./graphql/query";
+import HeaderQueryOptions from "./graphql/options";
 
-
-import './styles.css';
-
+import "./styles.css";
 
 class Header extends Component {
   static defaultProps = {
@@ -21,16 +19,31 @@ class Header extends Component {
   };
 
   render() {
+    const {
+      name,
+      photo,
+      description,
+      twitterUrl,
+      facebookUrl,
+      linkedInUrl
+    } = this.props;
+
     return (
       <header>
         <div className={"header-container"}>
-          <img src={this.props.photo.url} alt={""} className="header-photo" />
-          <h1>{this.props.name}</h1>
-          <p>{this.props.description}</p>
+          <img src={null} alt={""} className="header-photo" />
+          <h1>My Name</h1>
+          <p>My Description</p>
           <div className={"header-social-container"}>
-            <a href={this.props.twitterUrl} target="_blank"><i className="fab fa-twitter" /> Twitter</a>
-            <a href={this.props.facebookUrl} target="_blank"><i className="fab fa-facebook-f" /> Facebook</a>
-            <a href={this.props.linkedInUrl} target="_blank"><i className="fab fa-linkedin-in" /> LinkedIn</a>
+            <a href={twitterUrl} target="_blank">
+              <i className="fab fa-twitter" /> Twitter
+            </a>
+            <a href={facebookUrl} target="_blank">
+              <i className="fab fa-facebook-f" /> Facebook
+            </a>
+            <a href={linkedInUrl} target="_blank">
+              <i className="fab fa-linkedin-in" /> LinkedIn
+            </a>
           </div>
         </div>
       </header>
