@@ -1,13 +1,11 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ProjectsList from './components/ProjectsList'
-import ProjectDetail from './components/ProjectDetail'
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ProjectsList from "./components/ProjectsList";
 
-import './App.css';
-
+import "./App.css";
 
 export default class App extends Component {
   render() {
@@ -16,12 +14,16 @@ export default class App extends Component {
         <Header />
         <Router>
           <section className={"main"}>
-            <Route exact path="/" component={ProjectsList}/>
-            <Route exact path="/project/:id" component={ProjectDetail} />
+            <Route exact path="/" component={ProjectsList} />
+            <Route
+              exact
+              path="/project/:id"
+              component={() => <p>project detail</p>}
+            />
           </section>
         </Router>
         <Footer />
       </Fragment>
-    )
+    );
   }
 }

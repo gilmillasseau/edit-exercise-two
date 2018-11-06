@@ -71,9 +71,27 @@ REACT_APP_GRAPH_CMS_FOLIO_TOKEN=<your token>
 REACT_APP_GRAPH_CMS_FOLIO_ID=<your graphcms id>
 ```
 
-### Extra feature
+### Folder structure
 
-Build project detail view!
+In each component you will find a `graphql` folder
+This folder contains all the necessary logic to map the API request and the `props` you will need to feed every component
+
+### Header component
+
+Try to connect the header component using react-appolo
+Map the component `props` to the correct HTML tag
+
+### ProjectList component
+
+Every Folio has it's own projects, let's remove the mocks and also connect this component
+
+### ⭐️ _Bonus feature_ Project detail
+
+Look to the `App.js` file and try to build the detail view for each project
+
+- You need to create a new `ProjectDetail` component
+- Connect graphql API with `ProjectDetail`
+- Try to render the `Name` `Description` and `Image` ofor each project
 
 ### Congrats! 🎉
 
